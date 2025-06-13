@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Open%20Sans:700|Be%20Vietnam%20Pro:400");
+
+:root {
+  --text: #040c18;
+  --background: #ffffff;
+  --primary: #0064fa;
+  --secondary: #00ccff;
+  --accent: #a85de2;
+
+  --space-1x: 8px;
+  --space-2x: 16px;
+  --space-3x: 24px;
+  --space-4x: 32px;
+  --space-5x: 40px;
+}
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Font sizing */
+body {
+  font-family: "Be Vietnam Pro";
+  font-weight: 400;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Open Sans";
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-size: 3.053rem; /* 48.8px */
+}
+
+h2 {
+  font-size: 2.442rem; /* 39.04px */
+}
+
+h3 {
+  font-size: 1.954rem; /* 31.2px */
+}
+
+h4 {
+  font-size: 1.563rem; /* 24.96px */
+}
+
+h5 {
+  font-size: 1.25rem; /* 20px */
+}
+
+small {
+  font-size: 0.8rem; /* 12.8px */
+}
+/* About me */
+.container-rotated {
+  display: flex;
+  justify-content: center;
+}
+
+.about-me-container {
+  max-width: 1200px;
+  margin: var(--space-5x) var(--space-3x);
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+}
+
+.bg-image-container {
+  padding: var(--space-2x);
+  min-height: 500px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+.text-container {
+  margin: var(--space-5x) 0;
+  padding: var(--space-4x);
+  background-color: bisque;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.icons-container {
+  align-self: flex-end;
+}
