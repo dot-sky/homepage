@@ -7,6 +7,8 @@
   --secondary: #00ccff;
   --accent: #a85de2;
 
+  --text-25: #a1a1a1;
+
   --space-1x: 8px;
   --space-2x: 16px;
   --space-3x: 24px;
@@ -86,6 +88,10 @@ small {
   margin: var(--space-5x) var(--space-3x);
   display: grid;
   grid-template-columns: 4fr 6fr;
+
+  /* Create stacking context */
+  position: relative;
+  z-index: 1;
 }
 
 .bg-image-container {
@@ -95,18 +101,44 @@ small {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background-color: aliceblue;
+
+  background-image: url(assets/sky-md.jpg);
+  background-position: bottom;
+  background-size: cover;
+
+  color: white;
+  z-index: 2;
 }
 
-.text-container {
+.content-container {
   margin: var(--space-5x) 0;
   padding: var(--space-4x);
-  background-color: bisque;
 
   display: flex;
   flex-direction: column;
+  gap: var(--space-3x);
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.text-container h2 {
+  margin-bottom: var(--space-3x);
+}
+
+.text-container p {
+  margin-bottom: var(--space-2x);
 }
 
 .icons-container {
   align-self: flex-end;
+  display: flex;
+  gap: var(--space-3x);
+}
+
+.icon-md {
+  font-size: 2rem;
+}
+
+.shadow {
+  box-shadow: 0 0 12px var(--text-25);
 }
