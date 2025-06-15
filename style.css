@@ -15,6 +15,8 @@
   --bg-dark-80: #191d1e;
   --bg-dark-80: #375f70;
 
+  --bg-shadow: #37373783;
+
   --secondary: #58bbd3;
   --secondary2: #a4ccd9;
 
@@ -102,11 +104,26 @@ small {
 }
 
 .shadow {
-  box-shadow: 0 0 12px var(--text-25);
+  box-shadow: 0 0 12px var(--bg-shadow);
 }
 
 /* About me */
+header > .section-wrapper {
+  position: relative;
+  overflow-x: clip;
+}
+
+.container-rotated {
+  transform: rotate(-10deg) translateY(-180px) scale(140%, 120%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-dark-80);
+}
+
 .about-me-container {
+  /* transform: rotate(10deg) translateY(200px) scale(75%); */
+
   max-width: 1200px;
   margin: var(--space-5x) var(--space-3x);
   display: grid;
@@ -137,6 +154,7 @@ small {
   margin: var(--space-5x) 0;
   padding: var(--space-4x);
 
+  background-color: white;
   display: flex;
   flex-direction: column;
   gap: var(--space-3x);
