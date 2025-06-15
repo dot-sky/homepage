@@ -2,13 +2,18 @@
 
 :root {
   --text: #040c18;
+  --text-25: #a1a1a1b4;
+  --text-30: #7b7b7b;
+  --text-50: #606060;
+  --text-70: #393939;
+
   --background: #ffffff;
+  --bg-dark-10: #eaeaea;
   --primary: #0064fa;
   --secondary: #00ccff;
   --accent: #a85de2;
 
-  --text-25: #a1a1a1;
-
+  --space-base: 4px;
   --space-1x: 8px;
   --space-2x: 16px;
   --space-3x: 24px;
@@ -71,18 +76,27 @@ h4 {
 }
 
 h5 {
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.2rem; /* 20px */
 }
 
 small {
   font-size: 0.8rem; /* 12.8px */
 }
-/* About me */
-.container-rotated {
-  display: flex;
-  justify-content: center;
+
+/* General */
+.icon-md {
+  font-size: 2rem;
 }
 
+.icon-sm {
+  font-size: 1.2rem;
+}
+
+.shadow {
+  box-shadow: 0 0 12px var(--text-25);
+}
+
+/* About me */
 .about-me-container {
   max-width: 1200px;
   margin: var(--space-5x) var(--space-3x);
@@ -135,10 +149,71 @@ small {
   gap: var(--space-3x);
 }
 
-.icon-md {
-  font-size: 2rem;
+/* Cards section */
+.section-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.projects-section {
+  max-width: 1200px;
+  width: 100%;
+  margin: var(--space-5x);
 }
 
-.shadow {
-  box-shadow: 0 0 12px var(--text-25);
+.projects-section > h2 {
+  margin-bottom: var(--space-4x);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4x);
+}
+
+.project-img {
+  background-color: var(--bg-dark-10);
+  min-height: 265px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-img > img {
+  height: 265px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.project-content {
+  padding: var(--space-2x);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1x);
+}
+
+.project-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-desc p {
+  font-size: 0.8rem;
+  color: var(--text-30);
+  height: 4lh;
+}
+
+.project-icons {
+  display: flex;
+  gap: var(--space-1x);
+}
+.project-icons a {
+  padding: 0 var(--space-base);
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-icons > a > i {
+  display: flex;
+  align-items: center;
 }
