@@ -15,7 +15,7 @@
   --bg-dark-80: #191d1e;
   --bg-dark-80: #375f70;
 
-  --bg-shadow: #37373783;
+  --bg-shadow: #44444483;
 
   --secondary: #58bbd3;
   --secondary2: #a4ccd9;
@@ -30,6 +30,10 @@
   --space-3x: 24px;
   --space-4x: 32px;
   --space-5x: 40px;
+  --space-6x: 48px;
+  --space-8x: 64px;
+  --space-10x: 80px;
+  --space-11x: 88px;
 }
 
 /* CSS reset */
@@ -122,8 +126,6 @@ header > .section-wrapper {
 }
 
 .about-me-container {
-  /* transform: rotate(10deg) translateY(200px) scale(75%); */
-
   max-width: 1200px;
   margin: var(--space-5x) var(--space-3x);
   display: grid;
@@ -186,10 +188,11 @@ header > .section-wrapper {
   display: flex;
   justify-content: center;
 }
+
 .projects-section {
   max-width: 1200px;
   width: 100%;
-  margin: var(--space-5x);
+  margin: var(--space-8x) var(--space-5x);
 }
 
 .projects-section > h2 {
@@ -200,6 +203,7 @@ header > .section-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: var(--space-4x);
+  row-gap: var(--space-6x);
 }
 
 .project-img {
@@ -264,9 +268,6 @@ footer > .section-wrapper {
   gap: var(--space-4x);
 }
 
-.contact-me {
-}
-
 .contact-me > *:not(:last-child) {
   margin-bottom: var(--space-3x);
 }
@@ -284,4 +285,46 @@ footer > .section-wrapper {
   width: 100%;
   min-height: 100%;
   object-fit: cover;
+}
+.text-container > .about-img {
+  display: none;
+}
+
+/* Tablet */
+@media screen and (max-width: 1000px) {
+  .container-rotated {
+    transform: rotate(-10deg) translateY(-380px) scale(140%, 120%);
+  }
+  .about-me-container {
+    margin: var(--space-10x) var(--space-4x) var(--space-5x) var(--space-11x);
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .content-container {
+    margin-bottom: 0px;
+  }
+  .bg-image-container {
+    background-image: none;
+    position: absolute;
+    min-height: 0px;
+    transform: translateY(-50px);
+    color: white;
+  }
+
+  .bg-image-container.shadow {
+    box-shadow: none;
+  }
+
+  .text-container > .about-img {
+    display: block;
+    margin-top: calc(150px * -1);
+    margin-left: calc(100px * -1);
+    padding: var(--space-4x) var(--space-2x) var(--space-2x) var(--space-2x);
+    height: 400px;
+    width: 350px;
+    float: left;
+  }
 }
