@@ -382,6 +382,10 @@ footer > .section-wrapper {
   .projects-section {
     margin: var(--space-4x);
   }
+  .projects-section h2,
+  .contact-me h2 {
+    text-align: center;
+  }
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -391,6 +395,12 @@ footer > .section-wrapper {
   }
   .contact-me {
     padding: var(--space-3x);
+  }
+  .project-img {
+    min-height: 200px;
+  }
+  .project-img > img {
+    height: 200px;
   }
 }
 
