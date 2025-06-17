@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open%20Sans:700|Be%20Vietnam%20Pro:400");
 
 :root {
-  --text: #040c18;
+  --text: #292929;
   --text-25: #a1a1a1b4;
   --text-30: #7b7b7b;
   --text-50: #606060;
@@ -237,7 +237,7 @@ header > .section-wrapper {
 .project-desc p {
   font-size: 0.8rem;
   color: var(--text-30);
-  height: 4lh;
+  min-height: 4lh;
 }
 
 .project-icons {
@@ -383,7 +383,7 @@ footer > .section-wrapper {
     margin: var(--space-4x);
   }
   .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
   }
   .contact-section {
     grid-template-columns: 1fr;
